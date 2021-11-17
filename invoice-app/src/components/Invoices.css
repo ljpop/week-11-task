@@ -1,0 +1,7 @@
+.invoices {
+    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .invoices {}
+}

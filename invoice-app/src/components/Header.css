@@ -1,0 +1,110 @@
+.header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 20px 20px 0px;
+    background-color: var(--header);
+    justify-content: space-between;
+}
+
+.header-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-img {
+    background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 103px;
+    height: 103px;
+    border-radius: 0px 20px 20px 0px;
+    position: relative;
+}
+
+.logo-img-circle {
+    width: 40px;
+    height: 37.7px;
+    z-index: 2;
+}
+
+.logo-img-down {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    background-color: var(--purple-light);
+    z-index: 1;
+    border-radius: 20px 0px 20px 0px;
+}
+
+.light-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--line);
+}
+
+.light-img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 24px;
+}
+
+.user-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-img-avatar {
+    border-radius: 100%;
+    width: 40px;
+    margin: 24px 32px;
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        width: 100%;
+        height: min-content;
+        flex-direction: row;
+        border-radius: 0px;
+    }
+    .logo-img-size {
+        width: 40px;
+        height: 37.7px;
+    }
+    .logo-img {
+        width: 80px;
+        height: 80px;
+    }
+    .user-img-avatar {
+        width: 32px;
+    }
+    .header-item {
+        flex-direction: row;
+    }
+    .light-mode {
+        border-bottom: 0px solid var(--line);
+        border-right: 1px solid var(--line);
+    }
+    .light-img {
+        margin-bottom: 0px;
+        margin-right: 24px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .logo-img {
+        width: 72px;
+        height: 72px;
+    }
+    .logo-img-size {
+        width: 28px;
+        height: 26px;
+    }
+    .user-img-avatar {
+        margin: 20px 24px;
+    }
+}
