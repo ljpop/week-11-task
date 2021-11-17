@@ -9,14 +9,14 @@ const Header = () => {
     return (
         <div className='header'>
             <div className='logo-img header-item'>            <img className='logo-img-circle'
-              src={Logo}/>
+              src={Logo} alt=''/>
             <div className='logo-img-down'></div>
             </div>
             <div className='header-item'>
             <div className='light-mode'><img className='light-img'
-              src={Moon}/></div>
+              src={Moon} alt=''/></div>
             <div className='user-img'><img className='user-img-avatar'
-              src={Avatar}/></div>
+              src={Avatar} alt=''/></div>
               </div>
         </div>
     )
