@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Invoices from "./components/Invoices";
 
 function App() {
-  const [data, setTasks]=useState([
+  const [data]=useState([
     {id:1, 
     text: "Doctor Clinic",
     day: 'Feb 5th at 2:30 pm',
