@@ -1,7 +1,57 @@
 .invoices {
     width: 100%;
+    max-width: 730px;
+    margin: 0 auto;
+    position: relative;
+    left: calc( -103px / 2);
+    margin-top: 72px;
+    margin-bottom: 173px;
+}
+
+.invoices-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 65px;
+}
+
+.header-item-row {
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    margin-bottom: 8px;
+}
+
+p {
+    color: var(--paragraph-color);
+}
+
+@media screen and (max-width: 1200px) {
+    .invoices {
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .invoices {
+        margin-right: 0px;
+    }
 }
 
 @media screen and (max-width: 900px) {
-    .invoices {}
+    .invoices {
+        left: 0;
+        width: 100%;
+        max-width: calc(100% - 96px);
+        margin: 56px 48px 173px 48px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .invoices {
+        max-width: calc(100% - 48px);
+        margin: 32px 24px 105px 24px;
+    }
 }

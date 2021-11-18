@@ -1,10 +1,13 @@
 import './Invoices.css';
+import InvoicesHeader from './InvoicesHeader';
+import InvoicesList from './InvoicesList';
 
-const Invoices = () => {
+
+const Invoices = ({data}) => {
     return (
         <div className='invoices'>
-            <h1>Invoices</h1>
-            
+            <InvoicesHeader />    
+            <InvoicesList data={data} />                    
         </div>
     )
 }

@@ -13,7 +13,8 @@
     --light-bg: #f8f8fb;
     --black-blue: #141625;
     --header: #373B53;
-    --line: #494E6E
+    --line: #494E6E;
+    --paragraph-color: #888EB0;
 }
 
 * {

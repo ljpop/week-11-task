@@ -1,0 +1,21 @@
+.single-invoice {
+    border: 2px solid orange;
+    padding: 28px 32px;
+    margin-bottom: 16px;
+}
+
+.single-invoice:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .single-invoice {
+        padding: 28px 24px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .single-invoice {
+        padding: 24px 24px;
+    }
+}
