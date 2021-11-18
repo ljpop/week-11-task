@@ -15,6 +15,10 @@
     --header: #373B53;
     --line: #494E6E;
     --paragraph-color: #888EB0;
+    --paid: #33D69F;
+    --pending: #FF8F00;
+    --draft: #373B53;
+    --draft-dark-mode: #DFE3FA;
 }
 
 * {

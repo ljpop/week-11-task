@@ -3,8 +3,13 @@ import './SingleInvoice.css';
 const SingleInvoice = ({singledata}) => {
     return (
         <div className='single-invoice'>
-            <div>This is a single invoice id:  {singledata.id}</div>
-           <div>Text:  {singledata.text}     </div>
+            <div className = 'singleItem'>{singledata.id}</div>
+           <div className = 'singleItem'>Due {singledata.paymentDue} </div>
+           <div className = 'singleItem'>{singledata.clientName} </div>
+           <div className = 'singleItem'>{singledata.total} </div>
+
+{/* /*TODO: draft light */}
+           <div className = 'singleItem' style = {{textTransform:'capitalize', color: singledata.status==='paid'? '#33D69F' : (singledata.status==='pending' ? '#FF8F00': '#373B53')}}> <span className='little-circle'>•</span> {singledata.status}  </div>
         </div>
     )
 }

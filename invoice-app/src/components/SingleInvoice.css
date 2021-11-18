@@ -2,10 +2,24 @@
     border: 2px solid orange;
     padding: 28px 32px;
     margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .single-invoice:last-child {
     margin-bottom: 0;
+}
+
+.singleItem {
+    margin: 5px;
+    /* border: 2px solid red; */
+}
+
+.little-circle {
+    font-size: 36px;
+    position: relative;
+    bottom: -8px;
 }
 
 @media screen and (max-width: 900px) {
