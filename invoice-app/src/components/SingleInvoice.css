@@ -7,7 +7,8 @@
     justify-content: space-between;
     box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
     border-radius: 8px;
-    /*TODO: border-bottom: 1px solid #979797; */
+    background-color: var(--body);
+    /* border-bottom: 1px solid #979797; */
 }
 
 .single-invoice:last-child {
@@ -15,7 +16,7 @@
 }
 
 .singleItem {
-    padding: 9px 0px;
+    padding: 9px;
     /* border: 2px solid pink; */
 }
 
@@ -23,12 +24,29 @@
     width: 104px;
     font-weight: 700;
     position: relative;
+    border-radius: 8px;
+    /* mix-blend-mode: darken; */
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+}
+
+.total {
+    font-weight: 700;
+}
+
+.id,
+span.id {
+    font-weight: 700;
 }
 
 .little-circle {
-    font-size: 36px;
+    font-size: 32px;
     position: relative;
-    bottom: -9px;
+    bottom: -7px;
+}
+
+.hash {
+    color: var(--name-date);
+    font-weight: 700;
 }
 
 .name-date {
