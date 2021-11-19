@@ -1,7 +1,7 @@
 import './Header.css';
-import Logo from "./assets/logo.svg";
-import Avatar from "./assets/image-avatar.jpg";
-import Moon from "./assets/icon-moon.svg";
+import Logo from "../../assets/logo.svg";
+import Avatar from "../../assets/image-avatar.jpg";
+import Moon from "../../assets/icon-moon.svg";
 
 
 

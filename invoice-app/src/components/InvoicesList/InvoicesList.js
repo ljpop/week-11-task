@@ -1,5 +1,7 @@
 import './InvoicesList.css';
-import SingleInvoice from './SingleInvoice';
+// import EmptyList from '../EmptyList/EmptyList';
+
+import SingleInvoice from '../SingleInvoice/SingleInvoice';
 
 const InvoicesList = ({data}) => {
     return (
@@ -7,7 +9,7 @@ const InvoicesList = ({data}) => {
                {data.map((singledata) => (
                <SingleInvoice key={singledata.id} singledata={singledata} />
                ))}  
-            {/* <SingleInvoice /> */}
+               {/* <EmptyList /> */}
         </div>
     )
 }

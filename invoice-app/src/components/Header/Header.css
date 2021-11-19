@@ -6,6 +6,7 @@
     background-color: var(--header);
     justify-content: space-between;
     position: fixed;
+    z-index: 2;
 }
 
 .header-item {

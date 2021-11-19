@@ -1,5 +1,5 @@
-import Filter from "./Filter"
-import NewInvoice from "./NewInvoice"
+import Filter from "../Filter/Filter"
+import NewInvoiceBtn from "../NewInvoiceBtn/NewInvoiceBtn"
 
 const InvoicesHeader = () => {
     return (
@@ -11,7 +11,7 @@ const InvoicesHeader = () => {
             </div>
             <div className = 'header-item-row'>
                 <Filter />  
-                <NewInvoice />  
+                <NewInvoiceBtn />  
             </div>     
         </div>
     )
