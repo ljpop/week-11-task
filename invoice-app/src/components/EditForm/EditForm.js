@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { _getSingleInvoiceByID } from "../../utils/inovice-utils";
+import Input from "../Input/Input";
 import "./EditForm.css";
 
 const EditForm = (props) => {
@@ -18,46 +19,46 @@ const EditForm = (props) => {
   if (invoice) {
     jsx = (
       <>
-        <input
+        <Input
           name="description"
-          onChange={handleChange}
+          handleChange={handleChange}
           value={state.description}
         />
-        <br />
-        <input
+
+        <Input
           name="clientName"
-          onChange={handleChange}
+          handleChange={handleChange}
           value={state.clientName}
         />
-        <br />
-        <input name="total" onChange={handleChange} value={state.total} />
-        <br />
-        <input name="status" onChange={handleChange} value={state.status} />
-        <br />
-        <input
+
+        <Input name="total" handleChange={handleChange} value={state.total} />
+
+        <Input name="status" handleChange={handleChange} value={state.status} />
+
+        <Input
           name="clientEmail"
-          onChange={handleChange}
+          handleChange={handleChange}
           value={state.clientEmail}
         />
-        <br />
-        <input
+
+        <Input
           name="paymentDue"
-          onChange={handleChange}
+          handleChange={handleChange}
           value={state.paymentDue}
         />
-        <br />
-        <input
+
+        <Input
           name="createdAt"
-          onChange={handleChange}
+          handleChange={handleChange}
           value={state.createdAt}
         />
-        <br />
 
-        <input value={invoice.paymentTerms} />
+        <Input value={invoice.paymentTerms} />
         <button
           onClick={(e) => {
             e.preventDefault();
             props.updateItem(props.id, state);
+            props.closeForm();
           }}
         >
           Submit
