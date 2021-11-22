@@ -20,3 +20,15 @@ form {
   text-align: center;
   overflow: scroll;
 }
+
+.close-form {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: 2px solid blue;
+  cursor: pointer;
+}
+
+input {
+  margin: 10px;
+}
