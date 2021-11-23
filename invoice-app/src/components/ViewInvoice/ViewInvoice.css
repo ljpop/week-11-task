@@ -1,23 +1,117 @@
 .view-invoice {
-  border: 2px solid blue;
-  background-color: aqua;
-
   width: 100%;
   max-width: 730px;
   margin: 0 auto;
   position: relative;
-  margin-top: 72px;
-  margin-bottom: 173px;
+  margin-top: 64px;
+  margin-bottom: 54px;
+}
+
+.invoice-header {
+  background-color: white;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 32px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.invoice-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 48px;
+}
+
+.status-div {
+  display: flex;
+  align-items: center;
+}
+
+.status-div p {
+  margin-right: 16px;
+}
+
+.little-circle {
+  margin-right: 8px;
+}
+
+.status {
+  width: fit-content;
+  height: fit-content;
+  font-weight: 700;
+  position: relative;
+  border-radius: 8px;
+  text-transform: capitalize;
+  padding: 9px 17px 10px 17px;
+}
+
+.btn-back {
+  margin-bottom: 32px;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  margin-left: 24px;
+}
+
+.btn {
+  border-radius: 24px;
+  margin-left: 8px;
+  cursor: pointer;
+  padding: 17px 23px 16px 24px;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 700;
+}
+
+.paid {
+  color: var(--paid);
+  background-color: var(--paid-background);
+}
+
+.pending {
+  color: var(--pending);
+  background-color: var(--pending-background);
+}
+
+.draft {
+  color: var(--draft);
+  background-color: var(--draft-background);
+}
+
+.btn-edit {
+  background-color: var(--btn-edit);
+  color: var(--btn-edit-text);
+}
+
+.btn-edit:hover {
+  background-color: var(--btn-edit-hover);
+}
+.btn-delete {
+  background-color: var(--btn-delete);
+}
+.btn-delete:hover {
+  background-color: var(--btn-delete-hover);
+}
+
+.btn-paid {
+  background-color: var(--btn-paid);
+}
+.btn-paid:hover {
+  background-color: var(--btn-paid-hover);
 }
 
 @media screen and (max-width: 1000px) {
-  .invoices {
+  .view-invoice {
     margin-right: 30px;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .invoices {
+  .view-invoice {
     width: 100%;
     max-width: calc(100% - 96px);
     margin: 56px 48px 173px 48px;
@@ -25,7 +119,7 @@
 }
 
 @media screen and (max-width: 700px) {
-  .invoices {
+  .view-invoice {
     max-width: calc(100% - 48px);
     margin: 32px 24px 105px 24px;
   }

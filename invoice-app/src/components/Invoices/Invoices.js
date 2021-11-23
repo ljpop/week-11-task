@@ -5,7 +5,7 @@ import InvoicesList from "../InvoicesList/InvoicesList";
 const Invoices = ({ data }) => {
   return (
     <div className="invoices">
-      <InvoicesHeader />
+      <InvoicesHeader data={data} />
       <InvoicesList data={data} />
     </div>
   );

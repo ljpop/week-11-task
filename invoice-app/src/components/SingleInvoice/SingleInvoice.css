@@ -9,15 +9,24 @@
   border-radius: 8px;
   background-color: white;
   width: 100%;
+  cursor: pointer;
 }
 
+.single-invoice:hover {
+  border: 2px solid var(--hover-invoice);
+}
 .single-invoice:last-child {
   margin-bottom: 0;
 }
 
 .singleItem {
   padding: 9px;
+  margin-right: 27px;
   /* border: 2px solid pink; */
+}
+
+.singleItem:last-child {
+  margin-right: 0;
 }
 
 .status {

@@ -1,49 +1,53 @@
 .invoices {
-    width: 100%;
-    max-width: 730px;
-    margin: 0 auto;
-    position: relative;
-    margin-top: 72px;
-    margin-bottom: 173px;
+  width: 100%;
+  max-width: 730px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 72px;
+  margin-bottom: 4px;
+  /* border: 2px solid pink; */
+  /* height: 100vh; */
 }
 
 .invoices-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 65px;
+  align-items: center;
 }
 
 .header-item-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 h1 {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 p {
-    color: var(--paragraph-color);
+  color: var(--paragraph-color);
 }
 
 @media screen and (max-width: 1000px) {
-    .invoices {
-        margin-right: 30px;
-    }
+  .invoices {
+    margin-right: 30px;
+  }
 }
 
 @media screen and (max-width: 900px) {
-    .invoices {
-        width: 100%;
-        max-width: calc(100% - 96px);
-        margin: 56px 48px 173px 48px;
-    }
+  .invoices {
+    width: 100%;
+    max-width: calc(100% - 96px);
+    margin: 56px 48px 173px 48px;
+    margin-bottom: 173px;
+  }
 }
 
 @media screen and (max-width: 700px) {
-    .invoices {
-        max-width: calc(100% - 48px);
-        margin: 32px 24px 105px 24px;
-    }
+  .invoices {
+    max-width: calc(100% - 48px);
+    margin: 32px 24px 105px 24px;
+  }
 }
