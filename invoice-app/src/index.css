@@ -50,6 +50,10 @@
   letter-spacing: -0.25px;
 }
 
+.dark-theme * {
+  --button-new: #000;
+}
+
 .body2 {
   font-size: 11px;
   line-height: 18px;

@@ -5,6 +5,7 @@ const initialState = {
   editorOpened: false,
   currentEditingID: false,
   invoicesData: data,
+  darkTheme: false,
 };
 
 export const myReducer = (state = initialState, action) => {
@@ -78,6 +79,13 @@ export const myReducer = (state = initialState, action) => {
         ...state,
         invoicesData: [...state.invoicesData, newInvoice],
       };
+
+    case "TOGGLE_THEME":
+      if (state.darkTheme === true) {
+        return { ...state, darkTheme: false };
+      } else {
+        return { ...state, darkTheme: true };
+      }
 
     default:
       return state;

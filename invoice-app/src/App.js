@@ -11,9 +11,14 @@ const App = (props) => {
     jsxForm = <EditForm />;
   }
 
+  let clDarkTheme = "";
+  if (props.darkTheme) {
+    clDarkTheme = " dark-theme";
+  }
+
   return (
     <Router>
-      <div className="container">
+      <div className={"container" + clDarkTheme}>
         <Header />
         {jsxForm}
         <Routes>
@@ -28,6 +33,7 @@ const App = (props) => {
 const mapStateToProps = (state) => {
   return {
     editorOpened: state.editorOpened,
+    darkTheme: state.darkTheme,
   };
 };
 export default connect(mapStateToProps)(App);
