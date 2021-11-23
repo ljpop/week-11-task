@@ -73,8 +73,54 @@ const ViewInvoice = (props) => {
           <div>{jsx}</div>
         </div>
         <div className="invoice-content">
-          <div>{id}</div>
-          <div>{invoice.description}</div>
+          <div className="container-1">
+            <div className="info">
+              <div className="id-div">
+                <span>#</span>
+                {id}
+              </div>
+              <p>{invoice.description}</p>
+            </div>
+            <div className="sender">
+              <p className="sender">{invoice.senderAddress.street}</p>
+              <p className="sender">{invoice.senderAddress.city}</p>
+              <p className="sender">{invoice.senderAddress.postCode}</p>
+              <p className="sender">{invoice.senderAddress.country}</p>
+            </div>
+          </div>
+          <div className="container-1">
+            <div className="container-2-1">
+              <div className=" container-item">
+                <div className="inv-date">
+                  <p className="label">Invoice Date</p>
+                  <div className="font-bold">{invoice.createdAt}</div>
+                </div>
+                <div className="  payment-due ">
+                  <p className="label">Payment Due</p>
+                  <div className="font-bold">{invoice.paymentDue}</div>
+                </div>
+              </div>
+              <div className="bill-to container-item">
+                <p className="label">Bill To</p>
+                <div className="font-bold">{invoice.clientName}</div>
+                <div className="client-info ">
+                  <div className="client">{invoice.clientAddress.street}</div>
+                  <div className="client"> {invoice.clientAddress.city}</div>
+                  <div className="client">
+                    {" "}
+                    {invoice.clientAddress.postCode}
+                  </div>
+                  <div className="client">{invoice.clientAddress.country}</div>
+                </div>
+              </div>
+              <div className="client-email container-item">
+                <p className="label">Sent to</p>
+                <div className="font-bold">{invoice.clientEmail}</div>
+              </div>
+            </div>
+          </div>
+          <div className="items-list">ItemName</div>
+          <div className="amount">Amount Due {invoice.total}</div>
         </div>
       </div>
     </>

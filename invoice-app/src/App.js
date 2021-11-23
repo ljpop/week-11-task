@@ -24,12 +24,11 @@ function App() {
   const deleteItem = (id) => {
     let editedState = state.filter((item) => {
       if (item.id === id) {
-        // to je taj koji zelimo da obrisemo
-        return false; // znaci da nece uci u sastav novog niza
+        return false;
       }
-      return true; // sve ostale ostaju u nizu
+      return true;
     });
-    // i sad kad smo dobbili novi niz koji je skracen, upisujemo ga u state
+    //
     setState(editedState);
   };
 

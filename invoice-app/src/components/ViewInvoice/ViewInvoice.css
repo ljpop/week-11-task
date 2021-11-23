@@ -104,6 +104,107 @@
   background-color: var(--btn-paid-hover);
 }
 
+.sender {
+  /* border: 2px solid blue; */
+  text-align: right;
+  font-size: 11px;
+  line-height: 18px;
+  color: var(--gray-blue);
+  font-weight: 500;
+  letter-spacing: -0.23px;
+}
+
+.client {
+  /* border: 2px solid blue; */
+  text-align: left;
+  font-size: 11px;
+  line-height: 18px;
+  color: var(--gray-blue);
+  font-weight: 500;
+  letter-spacing: -0.23px;
+}
+
+.info {
+  /* border: 2px solid green; */
+}
+.inv-date {
+  /* border: 2px solid red; */
+  margin-bottom: 32px;
+}
+.client-email {
+  /* border: 2px solid orange; */
+}
+
+.bill-to {
+  /* border: 2px solid yellow; */
+}
+
+.client-info {
+  /* border: 2px dashed pink; */
+}
+.payment-due {
+  /* border: 2px solid black; */
+}
+
+.container-1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 21px;
+}
+
+.container-2-1 {
+  display: flex;
+  justify-content: left;
+  /* border: 2px solid blue; */
+  width: 100%;
+  /* justify-content: flex-start; */
+  margin-bottom: 48px;
+}
+
+.container-2-2 {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: left; */
+}
+
+.container-item {
+  margin-right: 100px;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.font-bold {
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.container-item:last-child {
+  margin-right: 0px;
+}
+
+.label {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.id-div {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.id-div span {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-blue);
+}
+
+.items-list {
+  height: 100px;
+  background-color: var(--items-list);
+}
+
 @media screen and (max-width: 1000px) {
   .view-invoice {
     margin-right: 30px;
