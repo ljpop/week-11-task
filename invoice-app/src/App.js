@@ -6,8 +6,10 @@ import data from "./data";
 import ViewInvoice from "./components/ViewInvoice/ViewInvoice";
 import { useState } from "react";
 import EditForm from "./components/EditForm/EditForm";
+import { connect } from "react-redux";
 
-function App() {
+const App = (props) => {
+  const dispatch = props.dispatch;
   const initialState = data;
   const [state, setState] = useState(initialState);
   const [showForm, setShowForm] = useState(false);
@@ -64,7 +66,7 @@ function App() {
   };
 
   let jsxForm = null;
-  if (showForm) {
+  if (props.editorOpened) {
     jsxForm = (
       <EditForm
         id={editorId}
@@ -98,6 +100,12 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
-export default App;
+// export default App;
+const mapStateToProps = (state) => {
+  return {
+    editorOpened: state.editorOpened,
+  };
+};
+export default connect(mapStateToProps)(App);

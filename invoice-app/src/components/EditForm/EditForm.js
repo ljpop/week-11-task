@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { connect, useDispatch } from "react-redux";
 import { _getSingleInvoiceByID } from "../../utils/inovice-utils";
 import Input from "../Input/Input";
 import "./EditForm.css";
@@ -6,12 +7,20 @@ import "./EditForm.css";
 const EditForm = (props) => {
   const invoice = _getSingleInvoiceByID(props.id, props.data);
   const [state, setState] = useState(invoice);
+
+  const dispatch = useDispatch();
   const handleChange = (e) => {
     let value = e.target.value;
     let name = e.target.name;
     setState({
       ...state,
       [name]: value,
+    });
+  };
+
+  const _close = () => {
+    dispatch({
+      type: "CLOSE_FORM",
     });
   };
 
@@ -58,7 +67,8 @@ const EditForm = (props) => {
           onClick={(e) => {
             e.preventDefault();
             props.updateItem(props.id, state);
-            props.closeForm();
+            // props.closeForm();
+            dispatch({ type: "CLOSE_FORM" });
           }}
         >
           Submit
@@ -72,11 +82,17 @@ const EditForm = (props) => {
         Edit Invoice {props.id}
         {jsx}
       </form>
-      <div className="close-form" onClick={props.closeForm}>
+      <div className="close-form" onClick={_close}>
         X
       </div>
     </div>
   );
 };
 
-export default EditForm;
+// export default EditForm;
+const mapStateToProps = (state) => {
+  return {
+    id: state.currentEditingID,
+  };
+};
+export default connect(mapStateToProps)(EditForm);

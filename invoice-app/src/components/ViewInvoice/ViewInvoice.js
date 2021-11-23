@@ -3,12 +3,14 @@ import { useParams } from "react-router";
 import { _getSingleInvoiceByID } from "../../utils/inovice-utils";
 import { Link } from "react-router-dom";
 import ArrowLeft from "../../assets/icon-arrow-left.svg";
+import { connect, useDispatch } from "react-redux";
 
 // import data from "../../data"; When you use backend
 
 // samostalna stranica koja se otiranjem i dobija od rute samo parametar ID i na osnovu njega samostalno mora da nabavi podatak na kojje
 
 const ViewInvoice = (props) => {
+  const dispatch = useDispatch();
   const data = props.data;
   const sviparametri = useParams();
   console.log(sviparametri);
@@ -26,7 +28,12 @@ const ViewInvoice = (props) => {
         <button
           className="btn btn-edit"
           onClick={(e) => {
-            props.openForm(id);
+            // props.openForm(id);
+            // dispatchujemo standard flux action https://github.com/redux-utilities/flux-standard-action
+            dispatch({
+              type: "OPEN_FORM",
+              payload: id,
+            });
           }}
         >
           Edit
