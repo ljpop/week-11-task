@@ -5,7 +5,7 @@ import Input from "../Input/Input";
 import "./EditForm.css";
 
 const EditForm = (props) => {
-  const invoice = _getSingleInvoiceByID(props.id, props.data);
+  const invoice = _getSingleInvoiceByID(props.id, props.invoicesData);
   const [state, setState] = useState(invoice);
 
   const dispatch = useDispatch();
@@ -66,7 +66,14 @@ const EditForm = (props) => {
         <button
           onClick={(e) => {
             e.preventDefault();
-            props.updateItem(props.id, state);
+            // props.updateItem(props.id, state);
+            dispatch({
+              type: "UPDATE_INVOICE",
+              payload: {
+                id: props.id,
+                editedValues: state,
+              },
+            });
             // props.closeForm();
             dispatch({ type: "CLOSE_FORM" });
           }}
@@ -93,6 +100,7 @@ const EditForm = (props) => {
 const mapStateToProps = (state) => {
   return {
     id: state.currentEditingID,
+    invoicesData: state.invoicesData,
   };
 };
 export default connect(mapStateToProps)(EditForm);

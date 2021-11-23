@@ -1,3 +1,4 @@
+import { connect } from "react-redux";
 import Filter from "../Filter/Filter";
 import NewInvoiceBtn from "../NewInvoiceBtn/NewInvoiceBtn";
 
@@ -21,4 +22,11 @@ const InvoicesHeader = ({ data }) => {
   );
 };
 
-export default InvoicesHeader;
+// export default InvoicesHeader;
+const mapStateToProps = (state) => {
+  return {
+    // id: state.currentEditingID,
+    data: state.invoicesData,
+  };
+};
+export default connect(mapStateToProps)(InvoicesHeader);

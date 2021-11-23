@@ -11,7 +11,8 @@ import { connect, useDispatch } from "react-redux";
 
 const ViewInvoice = (props) => {
   const dispatch = useDispatch();
-  const data = props.data;
+  // const data = props.data;
+  const data = props.invoicesData;
   const sviparametri = useParams();
   console.log(sviparametri);
   const { id } = useParams(); // sad u promenjivoj ID imamo id uhvaecn iz path url
@@ -42,7 +43,11 @@ const ViewInvoice = (props) => {
           <button
             className="btn btn-delete"
             onClick={(e) => {
-              props.deleteInvoice(id);
+              // props.deleteInvoice(id);
+              dispatch({
+                type: "DELETE_INVOICE",
+                payload: id,
+              });
             }}
           >
             Delete
@@ -51,7 +56,11 @@ const ViewInvoice = (props) => {
         <button
           className="btn btn-paid"
           onClick={(e) => {
-            props.updateInvoiceStatus(id);
+            // props.updateInvoiceStatus(id);
+            dispatch({
+              type: "UPDATE_INVOICE_STATUS",
+              payload: id,
+            });
           }}
         >
           Mark as Paid
@@ -134,4 +143,11 @@ const ViewInvoice = (props) => {
   );
 };
 
-export default ViewInvoice;
+// export default ViewInvoice;
+const mapStateToProps = (state) => {
+  return {
+    // id: state.currentEditingID,
+    invoicesData: state.invoicesData,
+  };
+};
+export default connect(mapStateToProps)(ViewInvoice);

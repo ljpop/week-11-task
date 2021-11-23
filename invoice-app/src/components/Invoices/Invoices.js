@@ -2,11 +2,11 @@ import "./Invoices.css";
 import InvoicesHeader from "../InvoicesHeader/InvoicesHeader";
 import InvoicesList from "../InvoicesList/InvoicesList";
 
-const Invoices = ({ data }) => {
+const Invoices = (props) => {
   return (
     <div className="invoices">
-      <InvoicesHeader data={data} />
-      <InvoicesList data={data} />
+      <InvoicesHeader />
+      <InvoicesList />
     </div>
   );
 };

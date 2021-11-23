@@ -2,6 +2,7 @@ import "./InvoicesList.css";
 import EmptyList from "../EmptyList/EmptyList";
 
 import SingleInvoice from "../SingleInvoice/SingleInvoice";
+import { connect } from "react-redux";
 
 const InvoicesList = ({ data }) => {
   return (
@@ -17,4 +18,11 @@ const InvoicesList = ({ data }) => {
   );
 };
 
-export default InvoicesList;
+// export default InvoicesList;
+const mapStateToProps = (state) => {
+  return {
+    // id: state.currentEditingID,
+    data: state.invoicesData,
+  };
+};
+export default connect(mapStateToProps)(InvoicesList);
