@@ -17,41 +17,52 @@ const ViewInvoice = (props) => {
   if (invoice) {
     jsx = (
       <>
-        <button
-          className="btn btn-edit"
-          onClick={(e) => {
-            dispatch({
-              type: "OPEN_FORM",
-              payload: id,
-            });
-          }}
-        >
-          Edit
-        </button>
-        <Link to="/">
-          <button
-            className="btn btn-delete"
-            onClick={(e) => {
-              dispatch({
-                type: "DELETE_INVOICE",
-                payload: id,
-              });
-            }}
-          >
-            Delete
-          </button>
-        </Link>
-        <button
-          className="btn btn-paid"
-          onClick={(e) => {
-            dispatch({
-              type: "UPDATE_INVOICE_STATUS",
-              payload: id,
-            });
-          }}
-        >
-          Mark as Paid
-        </button>
+        <div className="invoice-header">
+          <div className="status-div">
+            <p>Status</p>
+            <div className={`status ${invoice.status} `}>
+              <span className="little-circle">•</span>
+              {invoice.status}
+            </div>
+          </div>
+          <div>
+            <button
+              className="btn btn-edit"
+              onClick={(e) => {
+                dispatch({
+                  type: "OPEN_FORM",
+                  payload: id,
+                });
+              }}
+            >
+              Edit
+            </button>
+            <Link to="/">
+              <button
+                className="btn btn-delete"
+                onClick={(e) => {
+                  dispatch({
+                    type: "DELETE_INVOICE",
+                    payload: id,
+                  });
+                }}
+              >
+                Delete
+              </button>
+            </Link>
+            <button
+              className="btn btn-paid"
+              onClick={(e) => {
+                dispatch({
+                  type: "UPDATE_INVOICE_STATUS",
+                  payload: id,
+                });
+              }}
+            >
+              Mark as Paid
+            </button>
+          </div>
+        </div>
         <div className="invoice-content">
           <div className="container-1">
             <div className="info">
@@ -113,16 +124,7 @@ const ViewInvoice = (props) => {
           <img className="arrow-left" src={ArrowLeft} alt="" />
           <button className="btn-back">Go back</button>
         </Link>
-        <div className="invoice-header">
-          <div className="status-div">
-            <p>Status</p>
-            <div className={`status ${invoice.status} `}>
-              <span className="little-circle">•</span>
-              {invoice.status}
-            </div>
-          </div>
-          <div>{jsx}</div>
-        </div>
+        <div>{jsx}</div>
       </div>
     </>
   );
