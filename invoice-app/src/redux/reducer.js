@@ -1,4 +1,5 @@
 import data from "../data";
+import { getFreshId } from "../utils/id-utils";
 
 const initialState = {
   editorOpened: false,
@@ -63,6 +64,19 @@ export const myReducer = (state = initialState, action) => {
       return {
         ...state,
         invoicesData: editedInvoices3,
+      };
+
+    case "CREATE_INVOICE":
+      const freshID = getFreshId();
+      const newInvoice = {
+        id: freshID,
+        senderAddress: {},
+        clientAddress: {},
+        items: [{}],
+      };
+      return {
+        ...state,
+        invoicesData: [...state.invoicesData, newInvoice],
       };
 
     default:

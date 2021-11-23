@@ -12,8 +12,8 @@ const ViewInvoice = (props) => {
   console.log(sviparametri);
   const { id } = useParams();
   const invoice = _getSingleInvoiceByID(id, data);
-  let jsx = <p>Invoice not found</p>;
   console.log(invoice);
+  let jsx = <p>Invoice not found</p>;
   if (invoice) {
     jsx = (
       <>
@@ -52,27 +52,6 @@ const ViewInvoice = (props) => {
         >
           Mark as Paid
         </button>
-      </>
-    );
-  }
-
-  return (
-    <>
-      <div className="view-invoice">
-        <Link to="/">
-          <img className="arrow-left" src={ArrowLeft} alt="" />
-          <button className="btn-back">Go back</button>
-        </Link>
-        <div className="invoice-header">
-          <div className="status-div">
-            <p>Status</p>
-            <div className={`status ${invoice.status} `}>
-              <span className="little-circle">•</span>
-              {invoice.status}
-            </div>
-          </div>
-          <div>{jsx}</div>
-        </div>
         <div className="invoice-content">
           <div className="container-1">
             <div className="info">
@@ -122,6 +101,27 @@ const ViewInvoice = (props) => {
           </div>
           <div className="items-list">ItemName</div>
           <div className="amount">Amount Due {invoice.total}</div>
+        </div>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <div className="view-invoice">
+        <Link to="/">
+          <img className="arrow-left" src={ArrowLeft} alt="" />
+          <button className="btn-back">Go back</button>
+        </Link>
+        <div className="invoice-header">
+          <div className="status-div">
+            <p>Status</p>
+            <div className={`status ${invoice.status} `}>
+              <span className="little-circle">•</span>
+              {invoice.status}
+            </div>
+          </div>
+          <div>{jsx}</div>
         </div>
       </div>
     </>
