@@ -5,32 +5,21 @@ import { Link } from "react-router-dom";
 import ArrowLeft from "../../assets/icon-arrow-left.svg";
 import { connect, useDispatch } from "react-redux";
 
-// import data from "../../data"; When you use backend
-
-// samostalna stranica koja se otiranjem i dobija od rute samo parametar ID i na osnovu njega samostalno mora da nabavi podatak na kojje
-
 const ViewInvoice = (props) => {
   const dispatch = useDispatch();
-  // const data = props.data;
   const data = props.invoicesData;
   const sviparametri = useParams();
   console.log(sviparametri);
-  const { id } = useParams(); // sad u promenjivoj ID imamo id uhvaecn iz path url
-  // na osnovu ID-a hvatamo taj podatak
+  const { id } = useParams();
   const invoice = _getSingleInvoiceByID(id, data);
-  // let jsx = null;
   let jsx = <p>Invoice not found</p>;
   console.log(invoice);
   if (invoice) {
-    // znaci da invoice nije false, znaci da je pronadjen
     jsx = (
       <>
-        {/* <div>{invoice.description}</div> */}
         <button
           className="btn btn-edit"
           onClick={(e) => {
-            // props.openForm(id);
-            // dispatchujemo standard flux action https://github.com/redux-utilities/flux-standard-action
             dispatch({
               type: "OPEN_FORM",
               payload: id,
@@ -43,7 +32,6 @@ const ViewInvoice = (props) => {
           <button
             className="btn btn-delete"
             onClick={(e) => {
-              // props.deleteInvoice(id);
               dispatch({
                 type: "DELETE_INVOICE",
                 payload: id,
@@ -56,7 +44,6 @@ const ViewInvoice = (props) => {
         <button
           className="btn btn-paid"
           onClick={(e) => {
-            // props.updateInvoiceStatus(id);
             dispatch({
               type: "UPDATE_INVOICE_STATUS",
               payload: id,
@@ -78,9 +65,7 @@ const ViewInvoice = (props) => {
         </Link>
         <div className="invoice-header">
           <div className="status-div">
-            {/* <p>Status</p> <div className="status">{invoice.status}</div> */}
             <p>Status</p>
-
             <div className={`status ${invoice.status} `}>
               <span className="little-circle">•</span>
               {invoice.status}
@@ -143,10 +128,8 @@ const ViewInvoice = (props) => {
   );
 };
 
-// export default ViewInvoice;
 const mapStateToProps = (state) => {
   return {
-    // id: state.currentEditingID,
     invoicesData: state.invoicesData,
   };
 };

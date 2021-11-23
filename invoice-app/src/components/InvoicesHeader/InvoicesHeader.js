@@ -22,10 +22,8 @@ const InvoicesHeader = ({ data }) => {
   );
 };
 
-// export default InvoicesHeader;
 const mapStateToProps = (state) => {
   return {
-    // id: state.currentEditingID,
     data: state.invoicesData,
   };
 };
