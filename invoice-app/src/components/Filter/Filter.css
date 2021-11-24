@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  color: var(--filter-btn);
 }
 
 .arrow-up {

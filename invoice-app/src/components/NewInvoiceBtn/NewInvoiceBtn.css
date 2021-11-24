@@ -12,6 +12,10 @@
   cursor: pointer;
 }
 
+.new-invoice-btn:hover {
+  background-color: var(--button-new-hover);
+}
+
 .plus {
   color: var(--button-new);
   background-color: white;

@@ -62,7 +62,6 @@ const EditForm = (props) => {
           value={state.createdAt}
         />
 
-        <Input value={invoice.paymentTerms} />
         <button
           onClick={(e) => {
             e.preventDefault();

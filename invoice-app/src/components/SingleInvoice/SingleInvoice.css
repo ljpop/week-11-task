@@ -8,7 +8,7 @@
   justify-content: space-between;
   box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
   border-radius: 8px;
-  background-color: white;
+  background-color: var(--single-invoice);
   width: 100%;
   cursor: pointer;
   border: 1px solid transparent;
@@ -23,8 +23,23 @@
 
 .singleItem {
   padding: 9px;
-  margin-right: 27px;
+  /* margin-right: 27px; */
+  /* width: 20%; */
   /* border: 2px solid pink; */
+}
+
+.id,
+.total {
+  min-width: 15%;
+}
+
+.total {
+  text-align: right;
+}
+
+.date,
+.name {
+  min-width: 20%;
 }
 
 .singleItem:last-child {
@@ -32,14 +47,21 @@
 }
 
 .status {
-  width: 104px;
+  min-width: 104px;
   font-weight: 700;
   position: relative;
   border-radius: 8px;
+  margin-left: 40px;
+  margin-right: 20px;
 }
 
 .total {
   font-weight: 700;
+  color: var(--id);
+}
+
+.id {
+  color: var(--id);
 }
 
 .id,
@@ -58,8 +80,16 @@ span.id {
   font-weight: 700;
 }
 
-.name-date {
+/* .name-date {
   color: var(--name-date);
+} */
+
+.name {
+  color: var(--name);
+}
+
+.date {
+  color: var(--date);
 }
 
 @media screen and (max-width: 900px) {

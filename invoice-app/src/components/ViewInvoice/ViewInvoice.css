@@ -8,7 +8,7 @@
 }
 
 .invoice-header {
-  background-color: white;
+  background-color: var(--single-invoice);
   margin-bottom: 24px;
   display: flex;
   justify-content: space-between;
@@ -20,7 +20,7 @@
 }
 
 .invoice-content {
-  background-color: white;
+  background-color: var(--single-invoice);
   border-radius: 8px;
   padding: 48px;
 }
@@ -38,7 +38,7 @@
   margin-right: 8px;
 }
 
-.status {
+.status-view-invoice {
   width: fit-content;
   height: fit-content;
   font-weight: 700;
@@ -56,6 +56,11 @@
   border: none;
   font-weight: 700;
   margin-left: 24px;
+  color: var(--btn-back);
+}
+
+.btn-back:hover {
+  color: var(--btn-back-hover);
 }
 
 .btn {
@@ -80,7 +85,7 @@
 }
 
 .draft {
-  color: var(--draft);
+  color: var(--draft-color);
   background-color: var(--draft-background);
 }
 
@@ -90,6 +95,7 @@
 }
 
 .btn-edit:hover {
+  color: var(--btn-edit-hover-color);
   background-color: var(--btn-edit-hover);
 }
 .btn-delete {
@@ -133,9 +139,6 @@
   /* border: 2px solid red; */
   margin-bottom: 32px;
 }
-.client-email {
-  /* border: 2px solid orange; */
-}
 
 .bill-to {
   /* border: 2px solid yellow; */
@@ -170,15 +173,22 @@
 }
 
 .container-item {
-  margin-right: 100px;
+  width: 33.3%;
+  /* margin-right: 100px; */
   /* display: flex;
   flex-direction: column; */
+}
+.client-email {
+  /* width: 50%; */
+  /* align-content: center; */
+  /* border: 2px solid orange; */
 }
 
 .font-bold {
   font-weight: 700;
   font-size: 15px;
   margin-bottom: 8px;
+  color: var(--font-bold-color);
 }
 
 .container-item:last-child {
@@ -194,17 +204,33 @@
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 8px;
+  color: var(--id);
 }
 
 .id-div span {
   font-size: 16px;
   font-weight: 700;
-  color: var(--gray-blue);
+  color: var(--color-hash);
 }
 
-.items-list {
-  height: 100px;
-  background-color: var(--items-list);
+.amount {
+  background-color: var(--amount);
+  color: white;
+  padding: 32px;
+  display: flex;
+  border-radius: 0 0 8px 8px;
+
+  justify-content: space-between;
+}
+
+.amount-label {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.amount-number {
+  font-weight: 900;
+  font-size: 24px;
 }
 
 @media screen and (max-width: 1000px) {

@@ -21,6 +21,9 @@
   --draft-background: rgb(244, 244, 245);
   --paid-background: rgb(243, 253, 250);
   --pending-background: rgb(255, 249, 240);
+  --draft-color: #373b53;
+
+  --btn-edit-hover-color: rgba(126, 136, 195, 1);
 
   --draft-dark-mode: #dfe3fa;
   --name-date: #858bb2;
@@ -36,6 +39,23 @@
   --btn-edit-text: #7e88c3;
 
   --items-list: #f9fafe;
+  --items-header: #7e88c3;
+
+  --amount: #373b53;
+
+  --body-bck: #f2f2f2;
+  --invoices-header-text: #000;
+  --filter-btn: #000;
+  --single-invoice: white;
+  --id: #000;
+  --name: #858bb2;
+  --date: #7e88c3;
+  --btn-back: #000;
+  --btn-back-hover: #7e88c3;
+  --color-hash: #7e88c3;
+  --font-bold-color: #000;
+  --button-new-hover: #9277ff;
+  --h2: black;
 }
 
 * {
@@ -50,15 +70,11 @@
   letter-spacing: -0.25px;
 }
 
-.dark-theme * {
-  --button-new: #000;
-}
-
-.body2 {
+/* .body2 {
   font-size: 11px;
   line-height: 18px;
   letter-spacing: -0.23px;
-}
+} */
 
 h1,
 h2,
@@ -76,12 +92,13 @@ h2 {
   font-size: 20px;
   line-height: 22px;
   letter-spacing: -0.8px;
+  color: var(--h2);
 }
 
 .container {
   display: flex;
   flex-direction: row;
-  background-color: var(--body);
+  background-color: var(--body-bck);
   min-height: 100vh;
 }
 
@@ -89,4 +106,32 @@ h2 {
   .container {
     flex-direction: column;
   }
+}
+
+.dark-theme *,
+.dark-theme.container {
+  --invoices-header-text: #fff;
+  --body-bck: #000;
+  --paragraph-color: #dfe3fa;
+  --filter-btn: #fff;
+  --single-invoice: #1e2139;
+  --id: #fff;
+  --name: #fff;
+  --date: #dfe3fa;
+  --paid-background: rgba(51, 214, 159, 0.05);
+  --items-list: #252945;
+  --amount: #000;
+  --pending-background: rgba(255, 143, 0, 0.05);
+  --draft-background: rgba(223, 227, 250, 0.05);
+  --draft-color: #dfe3fa;
+  --btn-edit: #252945;
+  --btn-edit-text: #dfe3fa;
+  --btn-back: #fff;
+  --btn-back-hover: #888eb0;
+  --gray-blue: #dfe3fa;
+  --color-hash: #888eb0;
+
+  --font-bold-color: #fff;
+  --h2: white;
+  --items-header: #dfe3fa;
 }

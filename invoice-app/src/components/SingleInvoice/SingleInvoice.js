@@ -7,9 +7,11 @@ const SingleInvoice = ({ singledata }) => {
   const navigate = useNavigate();
 
   const _click = (id) => {
-    console.log("klik", id);
+    // console.log("klik", id);
     navigate("/invoice/" + singledata.id);
   };
+
+  const options = { year: "numeric", month: "short", day: "numeric" };
   // const pathZaSingleInvocePage = "/invoice/" + singledata.id;
   return (
     <div
@@ -22,10 +24,21 @@ const SingleInvoice = ({ singledata }) => {
         <span className="hash">#</span>
         {singledata.id}
       </div>
-      <div className="singleItem name-date ">Due {singledata.paymentDue} </div>
-      <div className="singleItem name-date ">{singledata.clientName} </div>
-      <div className="singleItem total">{singledata.total} </div>
-      <div
+      <div className="singleItem date ">
+        {singledata.paymentDue
+          ? "Due " +
+            new Date(singledata.paymentDue).toLocaleString("en-GB", options)
+          : "Not defined "}{" "}
+      </div>
+      <div className="singleItem name ">
+        {singledata.clientName ? singledata.clientName : "Not defined "}{" "}
+      </div>
+      <div className="singleItem total">
+        {singledata.total
+          ? "£" + Number(singledata.total).toFixed(2)
+          : "Not defined "}
+      </div>
+      {/* <div
         className="singleItem status"
         style={{
           textTransform: "capitalize",
@@ -43,8 +56,17 @@ const SingleInvoice = ({ singledata }) => {
               : "rgb(255,249,240)",
         }}
       >
-        {" "}
-        <span className="little-circle">•</span> {singledata.status}{" "}
+        <span className="little-circle">•</span>{" "}
+        {singledata.status ? singledata.status : (singledata.status = "Draft")}
+      </div> */}
+      <div
+        className={`singleItem status ${singledata.status}`}
+        style={{
+          textTransform: "capitalize",
+        }}
+      >
+        <span className="little-circle">•</span>{" "}
+        {singledata.status ? singledata.status : (singledata.status = "draft")}
       </div>
       <div>
         <img className="arrow-right" src={ArrowRight} alt="" />

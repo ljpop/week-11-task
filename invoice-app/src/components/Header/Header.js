@@ -2,11 +2,15 @@ import "./Header.css";
 import Logo from "../../assets/logo.svg";
 import Avatar from "../../assets/image-avatar.jpg";
 import Moon from "../../assets/icon-moon.svg";
+import Sun from "../../assets/icon-sun.svg";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 
-const Header = () => {
+const Header = ({ darkTheme }) => {
   const dispatch = useDispatch();
+  // console.log(darkTheme);
+  let icon = Moon;
+  if (darkTheme) icon = Sun;
 
   return (
     <div className="header">
@@ -21,7 +25,7 @@ const Header = () => {
         <div className="light-mode">
           <img
             className="light-img"
-            src={Moon}
+            src={icon}
             alt=""
             onClick={(e) => {
               dispatch({ type: "TOGGLE_THEME" });
@@ -36,4 +40,9 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  return {
+    darkTheme: state.darkTheme,
+  };
+};
+export default connect(mapStateToProps)(Header);

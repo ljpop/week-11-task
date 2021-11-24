@@ -6,13 +6,13 @@ const InvoicesHeader = ({ data }) => {
   let jsx = "";
   if (data.length) {
     jsx = `There are ${data.length} pending invoices`;
-  }
+  } else jsx = "No Invoices";
 
   return (
     <div className="invoices-header">
       <div>
         <h1>Invoices</h1>
-        <p>{jsx}</p>
+        <p className="invoices-num">{jsx}</p>
       </div>
       <div className="header-item-row">
         <Filter />
