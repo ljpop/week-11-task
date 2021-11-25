@@ -6,8 +6,9 @@ const NewInvoiceBtn = () => {
   const dispatch = useDispatch();
 
   return (
+    <>
     <div
-      className="new-invoice-btn"
+      className="new-invoice-btn desktop"
       onClick={(e) => {
         dispatch({
           type: "CREATE_INVOICE",
@@ -15,7 +16,18 @@ const NewInvoiceBtn = () => {
       }}
     >
       <img className="plus" src={Plus} alt="" /> New Invoice
+    </div>    
+    <div
+      className="new-invoice-btn mob"
+      onClick={(e) => {
+        dispatch({
+          type: "CREATE_INVOICE",
+        });
+      }}
+    >
+      <img className="plus" src={Plus} alt="" /> New 
     </div>
+      </>
   );
 };
 

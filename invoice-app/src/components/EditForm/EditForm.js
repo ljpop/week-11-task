@@ -11,7 +11,7 @@ const EditForm = (props) => {
   const dispatch = useDispatch();
   const handleChange = (e) => {
     let value = e.target.value;
-    let name = e.target.name;
+    let name = e.target.name;    
     setState({
       ...state,
       [name]: value,
@@ -27,40 +27,58 @@ const EditForm = (props) => {
   let jsx = null;
   if (invoice) {
     jsx = (
-      <>
+      <><div>
+      <label>Bill from </label>
+      <br />
+      <label>Description </label>     
+      <br />
+
         <Input
           name="description"
           handleChange={handleChange}
           value={state.description}
         />
-
+ <label>Client Name </label>     
+      <br />
         <Input
           name="clientName"
           handleChange={handleChange}
           value={state.clientName}
         />
+        </div>
+        <label>Total </label>     
+      <br />
 
         <Input name="total" handleChange={handleChange} value={state.total} />
 
+        <label>Status </label>     
+      <br />
         <Input name="status" handleChange={handleChange} value={state.status} />
-
+        <label>Client E-mail </label>     
+      <br />
         <Input
           name="clientEmail"
           handleChange={handleChange}
           value={state.clientEmail}
         />
+                <label>Payment Due </label>     
+      <br />
 
         <Input
           name="paymentDue"
           handleChange={handleChange}
           value={state.paymentDue}
         />
+      <label>Created At </label>     
+      <br />
 
         <Input
           name="createdAt"
           handleChange={handleChange}
           value={state.createdAt}
         />
+
+        
 
         <button
           onClick={(e) => {
@@ -83,9 +101,9 @@ const EditForm = (props) => {
     );
   }
   return (
-    <div className="new-invoice-form">
+    <div className="edit-invoice-form">
       <form>
-        Edit Invoice {props.id}
+        <div className = 'edit-form-header'>Edit  #{props.id}</div>
         {jsx}
       </form>
       <div className="close-form" onClick={_close}>
