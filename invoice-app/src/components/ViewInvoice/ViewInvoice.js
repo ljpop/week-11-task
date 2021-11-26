@@ -9,13 +9,10 @@ import ItemsList from "../ItemsList/ItemsList";
 const ViewInvoice = (props) => {
   const dispatch = useDispatch();
   const data = props.invoicesData;
-  // const sviparametri = useParams();
-  // console.log(sviparametri);
   const { id } = useParams();
   const invoice = _getSingleInvoiceByID(id, data);
 
   const options = { year: "numeric", month: "short", day: "numeric" };
-  // console.log(invoice);
   let jsx = <p>Invoice not found</p>;
   if (invoice) {
     jsx = (
@@ -28,7 +25,7 @@ const ViewInvoice = (props) => {
               {invoice.status}
             </div>
           </div>
-          <div className='buttons buttons-desktop'>
+          <div className="buttons buttons-desktop">
             <button
               className="btn btn-edit"
               onClick={(e) => {
@@ -73,7 +70,7 @@ const ViewInvoice = (props) => {
                 <span>#</span>
                 {id}
               </div>
-              <p className='descr'>{invoice.description}</p>
+              <p className="descr">{invoice.description}</p>
             </div>
             <div className="sender">
               <p className="sender">{invoice.senderAddress.street}</p>
@@ -83,18 +80,24 @@ const ViewInvoice = (props) => {
             </div>
           </div>
           <div className="container-2-1">
-            
             <div className=" container-item">
               <div className="inv-date">
                 <p className="label">Invoice Date</p>
-                <div className="font-bold">{new Date(invoice.createdAt).toLocaleString("en-GB", options) }</div>
+                <div className="font-bold">
+                  {new Date(invoice.createdAt).toLocaleString("en-GB", options)}
+                </div>
               </div>
               <div className="  payment-due ">
                 <p className="label">Payment Due</p>
-                <div className="font-bold">{ new Date(invoice.paymentDue).toLocaleString("en-GB", options) }</div>
+                <div className="font-bold">
+                  {new Date(invoice.paymentDue).toLocaleString(
+                    "en-GB",
+                    options
+                  )}
+                </div>
               </div>
             </div>
-            
+
             <div className="bill-to container-item">
               <p className="label">Bill To</p>
               <div className="font-bold">{invoice.clientName}</div>
@@ -110,7 +113,6 @@ const ViewInvoice = (props) => {
               <div className="font-bold">{invoice.clientEmail}</div>
             </div>
           </div>
-          {/* <ItemsList invoice={invoice} />  OVAKO RADI PROBAMO BOLJE */}
           <ItemsList itemsList={invoice.items} />
           <div className="amount">
             <div className="amount-label">Amount Due</div>
@@ -119,44 +121,43 @@ const ViewInvoice = (props) => {
             </div>
           </div>
         </div>
-        <div className='buttons buttons-mob'>
+        <div className="buttons buttons-mob">
+          <button
+            className="btn btn-edit"
+            onClick={(e) => {
+              dispatch({
+                type: "OPEN_FORM",
+                payload: id,
+              });
+            }}
+          >
+            Edit
+          </button>
+          <Link to="/">
             <button
-              className="btn btn-edit"
+              className="btn btn-delete"
               onClick={(e) => {
                 dispatch({
-                  type: "OPEN_FORM",
+                  type: "DELETE_INVOICE",
                   payload: id,
                 });
               }}
             >
-              Edit
+              Delete
             </button>
-            <Link to="/">
-              <button
-                className="btn btn-delete"
-                onClick={(e) => {
-                  dispatch({
-                    type: "DELETE_INVOICE",
-                    payload: id,
-                  });
-                }}
-              >
-                Delete
-              </button>
-            </Link>
-            <button
-              className="btn btn-paid"
-              onClick={(e) => {
-                dispatch({
-                  type: "UPDATE_INVOICE_STATUS",
-                  payload: id,
-                });
-              }}
-            >
-              Mark as Paid
-            </button>
-          </div>
-        
+          </Link>
+          <button
+            className="btn btn-paid"
+            onClick={(e) => {
+              dispatch({
+                type: "UPDATE_INVOICE_STATUS",
+                payload: id,
+              });
+            }}
+          >
+            Mark as Paid
+          </button>
+        </div>
       </>
     );
   }

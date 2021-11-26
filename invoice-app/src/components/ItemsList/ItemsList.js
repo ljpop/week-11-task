@@ -1,16 +1,3 @@
-// const ItemsList = (invoice) => {
-//   const invoiceEx = invoice;
-
-//   return (
-//     <div className="items-list">
-//       <div>Items List Header</div>
-//       {console.log(invoiceEx.invoice.items[0])}
-//     </div>
-//   );
-// };
-
-// export default ItemsList;
-
 import "./ItemsList.css";
 
 const ItemsList = ({ itemsList }) => {
@@ -26,8 +13,6 @@ const ItemsList = ({ itemsList }) => {
 
       {lista.map((singleListItem, index) => (
         <div className="single-item-list" key={index}>
-  
-      
           <div className="item-name item-main">{singleListItem.name}</div>
           <div className="item-qty item-main">{singleListItem.quantity}</div>
           <div className="item-price item-main">
@@ -35,7 +20,7 @@ const ItemsList = ({ itemsList }) => {
               ? "£" + Number(singleListItem.price).toFixed(2)
               : " "}
           </div>
-          
+
           <div className="item-total item-main">
             {singleListItem.total
               ? "£" + Number(singleListItem.total).toFixed(2)

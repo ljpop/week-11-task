@@ -11,7 +11,7 @@ const EditForm = (props) => {
   const dispatch = useDispatch();
   const handleChange = (e) => {
     let value = e.target.value;
-    let name = e.target.name;    
+    let name = e.target.name;
     setState({
       ...state,
       [name]: value,
@@ -27,50 +27,51 @@ const EditForm = (props) => {
   let jsx = null;
   if (invoice) {
     jsx = (
-      <><div>
-      <label>Bill from </label>
-      <br />
-      <label>Description </label>     
-      <br />
+      <>
+        <div>
+          <label>Bill from </label>
+          <br />
+          <label>Description </label>
+          <br />
 
-        <Input
-          name="description"
-          handleChange={handleChange}
-          value={state.description}
-        />
- <label>Client Name </label>     
-      <br />
-        <Input
-          name="clientName"
-          handleChange={handleChange}
-          value={state.clientName}
-        />
+          <Input
+            name="description"
+            handleChange={handleChange}
+            value={state.description}
+          />
+          <label>Client Name </label>
+          <br />
+          <Input
+            name="clientName"
+            handleChange={handleChange}
+            value={state.clientName}
+          />
         </div>
-        <label>Total </label>     
-      <br />
+        <label>Total </label>
+        <br />
 
         <Input name="total" handleChange={handleChange} value={state.total} />
 
-        <label>Status </label>     
-      <br />
+        <label>Status </label>
+        <br />
         <Input name="status" handleChange={handleChange} value={state.status} />
-        <label>Client E-mail </label>     
-      <br />
+        <label>Client E-mail </label>
+        <br />
         <Input
           name="clientEmail"
           handleChange={handleChange}
           value={state.clientEmail}
         />
-                <label>Payment Due </label>     
-      <br />
+        <label>Payment Due </label>
+        <br />
 
         <Input
           name="paymentDue"
           handleChange={handleChange}
           value={state.paymentDue}
         />
-      <label>Created At </label>     
-      <br />
+        <label>Created At </label>
+        <br />
 
         <Input
           name="createdAt"
@@ -78,12 +79,9 @@ const EditForm = (props) => {
           value={state.createdAt}
         />
 
-        
-
         <button
           onClick={(e) => {
             e.preventDefault();
-            // props.updateItem(props.id, state);
             dispatch({
               type: "UPDATE_INVOICE",
               payload: {
@@ -91,7 +89,6 @@ const EditForm = (props) => {
                 editedValues: state,
               },
             });
-            // props.closeForm();
             dispatch({ type: "CLOSE_FORM" });
           }}
         >
@@ -103,7 +100,7 @@ const EditForm = (props) => {
   return (
     <div className="edit-invoice-form">
       <form>
-        <div className = 'edit-form-header'>Edit  #{props.id}</div>
+        <div className="edit-form-header">Edit #{props.id}</div>
         {jsx}
       </form>
       <div className="close-form" onClick={_close}>
@@ -113,7 +110,6 @@ const EditForm = (props) => {
   );
 };
 
-// export default EditForm;
 const mapStateToProps = (state) => {
   return {
     id: state.currentEditingID,

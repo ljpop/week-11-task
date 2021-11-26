@@ -1,133 +1,125 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
 :root {
-    --purple: #7c5dfa;
-    --purple-light: #9277ff;
-    --purple-dark: #1e2139;
-    --purple-moderate: #252945;
-    --white-purple: #dfe3fa;
-    --gray: #888eb0;
-    --gray-blue: #7e88c3;
-    --black: #0c0e16;
-    --red: #ec5757;
-    --red-light: #9277ff;
-    --light-bg: #f8f8fb;
-    --black-blue: #141625;
-    --header: #373b53;
-    --line: #494e6e;
-    --paragraph-color: #888eb0;
-    --paid: #33d69f;
-    --pending: #ff8f00;
-    --draft: #373b53;
-    --draft-background: rgb(244, 244, 245);
-    --paid-background: rgb(243, 253, 250);
-    --pending-background: rgb(255, 249, 240);
-    --draft-color: #373b53;
-    --btn-edit-hover-color: rgba(126, 136, 195, 1);
-    --draft-dark-mode: #dfe3fa;
-    --name-date: #858bb2;
-    --body: #f2f2f2;
-    --hover-invoice: #7c5dfa;
-    --button-new: #7c5dfa;
-    --btn-edit: #f9fafe;
-    --btn-edit-hover: #dfe3fa;
-    --btn-delete: #ec5757;
-    --btn-delete-hover: #ff9797;
-    --btn-paid-hover: #9277ff;
-    --btn-paid: #7c5dfa;
-    --btn-edit-text: #7e88c3;
-    --items-list: #f9fafe;
-    --items-header: #7e88c3;
-    --amount: #373b53;
-    --body-bck: #f2f2f2;
-    --invoices-header-text: #000;
-    --filter-btn: #000;
-    --single-invoice: white;
-    --id: #000;
-    --name: #858bb2;
-    --date: #7e88c3;
-    --btn-back: #000;
-    --btn-back-hover: #7e88c3;
-    --color-hash: #7e88c3;
-    --font-bold-color: #000;
-    --button-new-hover: #9277ff;
-    --h2: black;
+  --purple: #7c5dfa;
+  --purple-light: #9277ff;
+  --purple-dark: #1e2139;
+  --purple-moderate: #252945;
+  --white-purple: #dfe3fa;
+  --gray: #888eb0;
+  --gray-blue: #7e88c3;
+  --black: #0c0e16;
+  --red: #ec5757;
+  --red-light: #9277ff;
+  --light-bg: #f8f8fb;
+  --black-blue: #141625;
+  --header: #373b53;
+  --line: #494e6e;
+  --paragraph-color: #888eb0;
+  --paid: #33d69f;
+  --pending: #ff8f00;
+  --draft: #373b53;
+  --draft-background: rgb(244, 244, 245);
+  --paid-background: rgb(243, 253, 250);
+  --pending-background: rgb(255, 249, 240);
+  --draft-color: #373b53;
+  --btn-edit-hover-color: rgba(126, 136, 195, 1);
+  --draft-dark-mode: #dfe3fa;
+  --name-date: #858bb2;
+  --body: #f2f2f2;
+  --hover-invoice: #7c5dfa;
+  --button-new: #7c5dfa;
+  --btn-edit: #f9fafe;
+  --btn-edit-hover: #dfe3fa;
+  --btn-delete: #ec5757;
+  --btn-delete-hover: #ff9797;
+  --btn-paid-hover: #9277ff;
+  --btn-paid: #7c5dfa;
+  --btn-edit-text: #7e88c3;
+  --items-list: #f9fafe;
+  --items-header: #7e88c3;
+  --amount: #373b53;
+  --body-bck: #f2f2f2;
+  --invoices-header-text: #000;
+  --filter-btn: #000;
+  --single-invoice: white;
+  --id: #000;
+  --name: #858bb2;
+  --date: #7e88c3;
+  --btn-back: #000;
+  --btn-back-hover: #7e88c3;
+  --color-hash: #7e88c3;
+  --font-bold-color: #000;
+  --button-new-hover: #9277ff;
+  --h2: black;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Spartan", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: -0.25px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
 }
-
-
-/* .body2 {
-  font-size: 11px;
-  line-height: 18px;
-  letter-spacing: -0.23px;
-} */
 
 h1,
 h2,
 h3 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 h1 {
-    font-size: 32px;
-    line-height: 36px;
-    letter-spacing: -1px;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -1px;
 }
 
 h2 {
-    font-size: 20px;
-    line-height: 22px;
-    letter-spacing: -0.8px;
-    color: var(--h2);
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.8px;
+  color: var(--h2);
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--body-bck);
-    min-height: 100vh;
-    /* min-width: 100vh; */
+  display: flex;
+  flex-direction: row;
+  background-color: var(--body-bck);
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 900px) {
-    .container {
-        flex-direction: column;
-    }
+  .container {
+    flex-direction: column;
+  }
 }
 
 .dark-theme *,
 .dark-theme.container {
-    --invoices-header-text: #fff;
-    --body-bck: #000;
-    --paragraph-color: #dfe3fa;
-    --filter-btn: #fff;
-    --single-invoice: #1e2139;
-    --id: #fff;
-    --name: #fff;
-    --date: #dfe3fa;
-    --paid-background: rgba(51, 214, 159, 0.05);
-    --items-list: #252945;
-    --amount: #000;
-    --pending-background: rgba(255, 143, 0, 0.05);
-    --draft-background: rgba(223, 227, 250, 0.05);
-    --draft-color: #dfe3fa;
-    --btn-edit: #252945;
-    --btn-edit-text: #dfe3fa;
-    --btn-back: #fff;
-    --btn-back-hover: #888eb0;
-    --gray-blue: #dfe3fa;
-    --color-hash: #888eb0;
-    --font-bold-color: #fff;
-    --h2: white;
-    --items-header: #dfe3fa;
+  --invoices-header-text: #fff;
+  --body-bck: #000;
+  --paragraph-color: #dfe3fa;
+  --filter-btn: #fff;
+  --single-invoice: #1e2139;
+  --id: #fff;
+  --name: #fff;
+  --date: #dfe3fa;
+  --paid-background: rgba(51, 214, 159, 0.05);
+  --items-list: #252945;
+  --amount: #000;
+  --pending-background: rgba(255, 143, 0, 0.05);
+  --draft-background: rgba(223, 227, 250, 0.05);
+  --draft-color: #dfe3fa;
+  --btn-edit: #252945;
+  --btn-edit-text: #dfe3fa;
+  --btn-back: #fff;
+  --btn-back-hover: #888eb0;
+  --gray-blue: #dfe3fa;
+  --color-hash: #888eb0;
+  --font-bold-color: #fff;
+  --h2: #fff;
+  --items-header: #dfe3fa;
 }

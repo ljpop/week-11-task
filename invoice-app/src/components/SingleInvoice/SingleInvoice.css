@@ -1,6 +1,5 @@
 .single-invoice {
     box-sizing: border-box;
-    /* border: 2px solid orange; */
     padding: 16px 32px;
     margin-bottom: 16px;
     display: flex;
@@ -25,9 +24,6 @@
 
 .singleItem {
     padding: 9px;
-    /* margin-right: 27px; */
-    /* width: 20%; */
-    /* border: 2px solid pink; */
 }
 
 .id,
@@ -81,11 +77,6 @@ span.id {
     color: var(--name-date);
     font-weight: 700;
 }
-
-
-/* .name-date {
-  color: var(--name-date);
-} */
 
 .name {
     color: var(--name);

@@ -1,370 +1,338 @@
 .view-invoice {
-    width: 100%;
-    max-width: 730px;
-    margin: 0 auto;
-    position: relative;
-    margin-top: 64px;
-    margin-bottom: 54px;
+  width: 100%;
+  max-width: 730px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 64px;
+  margin-bottom: 54px;
 }
 
 .invoice-header {
-    background-color: var(--single-invoice);
-    margin-bottom: 24px;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 32px;
-    border-radius: 8px;
-    align-items: center;
-    flex-direction: row;
-    /* border: 2px solid red; */
+  background-color: var(--single-invoice);
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 32px;
+  border-radius: 8px;
+  align-items: center;
+  flex-direction: row;
 }
 
 .invoice-content {
-    background-color: var(--single-invoice);
-    border-radius: 8px;
-    padding: 48px;
+  background-color: var(--single-invoice);
+  border-radius: 8px;
+  padding: 48px;
 }
 
 .status-div {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .status-div p {
-    margin-right: 16px;
+  margin-right: 16px;
 }
 
 .little-circle {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .status-view-invoice {
-    width: fit-content;
-    height: fit-content;
-    font-weight: 700;
-    position: relative;
-    border-radius: 8px;
-    text-transform: capitalize;
-    padding: 9px 17px 10px 17px;
+  width: fit-content;
+  height: fit-content;
+  font-weight: 700;
+  position: relative;
+  border-radius: 8px;
+  text-transform: capitalize;
+  padding: 9px 17px 10px 17px;
 }
 
 .btn-back {
-    margin-bottom: 32px;
-    cursor: pointer;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    font-weight: 700;
-    margin-left: 24px;
-    color: var(--btn-back);
+  margin-bottom: 32px;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  margin-left: 24px;
+  color: var(--btn-back);
 }
 
 .btn-back:hover {
-    color: var(--btn-back-hover);
+  color: var(--btn-back-hover);
 }
 
 .btn {
-    border-radius: 24px;
-    margin-left: 8px;
-    cursor: pointer;
-    padding: 17px 23px 16px 24px;
-    outline: none;
-    border: none;
-    color: white;
-    font-weight: 700;
+  border-radius: 24px;
+  margin-left: 8px;
+  cursor: pointer;
+  padding: 17px 23px 16px 24px;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 700;
 }
 
 .paid {
-    color: var(--paid);
-    background-color: var(--paid-background);
+  color: var(--paid);
+  background-color: var(--paid-background);
 }
 
 .pending {
-    color: var(--pending);
-    background-color: var(--pending-background);
+  color: var(--pending);
+  background-color: var(--pending-background);
 }
 
 .draft {
-    color: var(--draft-color);
-    background-color: var(--draft-background);
+  color: var(--draft-color);
+  background-color: var(--draft-background);
 }
 
 .btn-edit {
-    background-color: var(--btn-edit);
-    color: var(--btn-edit-text);
+  background-color: var(--btn-edit);
+  color: var(--btn-edit-text);
 }
 
 .btn-edit:hover {
-    color: var(--btn-edit-hover-color);
-    background-color: var(--btn-edit-hover);
+  color: var(--btn-edit-hover-color);
+  background-color: var(--btn-edit-hover);
 }
 
 .btn-delete {
-    background-color: var(--btn-delete);
+  background-color: var(--btn-delete);
 }
 
 .btn-delete:hover {
-    background-color: var(--btn-delete-hover);
+  background-color: var(--btn-delete-hover);
 }
 
 .btn-paid {
-    background-color: var(--btn-paid);
+  background-color: var(--btn-paid);
 }
 
 .btn-paid:hover {
-    background-color: var(--btn-paid-hover);
+  background-color: var(--btn-paid-hover);
 }
 
 .sender {
-    /* border: 2px solid blue; */
-    text-align: right;
-    font-size: 11px;
-    line-height: 18px;
-    color: var(--gray-blue);
-    font-weight: 500;
-    letter-spacing: -0.23px;
+  text-align: right;
+  font-size: 11px;
+  line-height: 18px;
+  color: var(--gray-blue);
+  font-weight: 500;
+  letter-spacing: -0.23px;
 }
 
 .client {
-    /* border: 2px solid blue; */
-    text-align: left;
-    font-size: 11px;
-    line-height: 18px;
-    color: var(--gray-blue);
-    font-weight: 500;
-    letter-spacing: -0.23px;
-}
-
-.info {
-    /* border: 2px solid green; */
+  text-align: left;
+  font-size: 11px;
+  line-height: 18px;
+  color: var(--gray-blue);
+  font-weight: 500;
+  letter-spacing: -0.23px;
 }
 
 .inv-date {
-    /* border: 2px solid red; */
-    margin-bottom: 32px;
-}
-
-.bill-to {
-    /* border: 2px solid yellow; */
-}
-
-.client-info {
-    /* border: 2px dashed pink; */
-}
-
-.payment-due {
-    /* border: 2px solid black; */
+  margin-bottom: 32px;
 }
 
 .container-1 {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 21px;
 }
 
 .container-2-1 {
-    display: flex;
-    justify-content: left;
-    /* border: 2px solid blue; */
-    width: 100%;
-    /* justify-content: flex-start; */
-    margin-bottom: 48px;
-    flex-wrap: nowrap;
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  margin-bottom: 48px;
+  flex-wrap: nowrap;
 }
 
 .container-2-2 {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: left; */
+  display: flex;
+  flex-direction: column;
 }
 
 .container-item {
-    width: 33.3%;
-    /* min-width: 200px; */
-    /* margin-right: 100px; */
-    /* display: flex;
-  flex-direction: column; */
+  width: 33.3%;
 }
 
 .font-bold {
-    font-weight: 700;
-    font-size: 15px;
-    margin-bottom: 8px;
-    color: var(--font-bold-color);
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: var(--font-bold-color);
 }
 
 .container-item:last-child {
-    margin-right: 0px;
+  margin-right: 0px;
 }
 
 .label {
-    text-align: left;
-    margin-bottom: 12px;
+  text-align: left;
+  margin-bottom: 12px;
 }
 
 .id-div {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: var(--id);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--id);
 }
 
 .id-div span {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--color-hash);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-hash);
 }
 
 .amount {
-    background-color: var(--amount);
-    color: white;
-    padding: 32px;
-    display: flex;
-    border-radius: 0 0 8px 8px;
-    justify-content: space-between;
+  background-color: var(--amount);
+  color: white;
+  padding: 32px;
+  display: flex;
+  border-radius: 0 0 8px 8px;
+  justify-content: space-between;
 }
 
 .amount-label {
-    font-size: 11px;
-    font-weight: 500;
+  font-size: 11px;
+  font-weight: 500;
 }
 
 .amount-number {
-    font-weight: 900;
-    font-size: 24px;
+  font-weight: 900;
+  font-size: 24px;
 }
 
 .buttons-mob {
-    display: none;
+  display: none;
 }
 
-
-/* .buttons-desktop {
-  display: none;
-} */
-
 @media screen and (max-width: 1000px) {
-    .view-invoice {
-        margin-right: 30px;
-    }
+  .view-invoice {
+    margin-right: 30px;
+  }
 }
 
 @media screen and (max-width: 900px) {
-    .view-invoice {
-        width: 100%;
-        max-width: calc(100% - 96px);
-        margin: 56px 48px 53px 48px;
-    }
+  .view-invoice {
+    width: 100%;
+    max-width: calc(100% - 96px);
+    margin: 56px 48px 53px 48px;
+  }
 }
 
 @media screen and (max-width: 700px) {
-    .view-invoice {
-        max-width: calc(100% - 48px);
-        margin: 32px 24px 105px 24px;
-    }
-    .invoice-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .status-div {
-        width: 100%;
-        justify-content: left;
-        margin-bottom: 15px;
-    }
-    .buttons {
-        width: 100%;
-        display: flex;
-        margin: 0;
-    }
-    .btn-edit,
-    .btn-paid,
-    .btn-delete {
-        margin: 0;
-        margin-right: 10px;
-    }
-    .container-1 {
-        flex-direction: column;
-    }
-    .sender,
-    .descr {
-        text-align: left;
-    }
-    .descr {
-        margin-bottom: 30px;
-    }
-    .container-2-1 {
-        flex-wrap: wrap;
-    }
-    .container-item {
-        width: 50%;
-    }
-    .client-email {
-        margin-top: 32px;
-    }
-    .amount-number {
-        font-size: 20px;
-        line-height: 32px;
-    }
-    .amount {
-        align-items: center;
-        padding: 24px;
-    }
-    .bill-to {
-        padding-left: 20px;
-    }
-    .buttons-desktop {
-        display: none;
-    }
-    .status-div {
-        margin-bottom: 0;
-    }
-    .buttons-mob {
-        display: flex;
-        background-color: var(--single-invoice);
-        padding: 24px;
-        border-radius: 8px;
-        margin-top: 56px;
-        width: calc(100% + 48px);
-        position: relative;
-        left: -24px;
-        justify-content: center;
-    }
-    .btn-edit,
-    .btn-paid,
-    .btn-delete {
-        margin: 0;
-        margin-right: 10px;
-    }
+  .view-invoice {
+    max-width: calc(100% - 48px);
+    margin: 32px 24px 105px 24px;
+  }
+  .invoice-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .status-div {
+    width: 100%;
+    justify-content: left;
+    margin-bottom: 15px;
+  }
+  .buttons {
+    width: 100%;
+    display: flex;
+    margin: 0;
+  }
+  .btn-edit,
+  .btn-paid,
+  .btn-delete {
+    margin: 0;
+    margin-right: 10px;
+  }
+  .container-1 {
+    flex-direction: column;
+  }
+  .sender,
+  .descr {
+    text-align: left;
+  }
+  .descr {
+    margin-bottom: 30px;
+  }
+  .container-2-1 {
+    flex-wrap: wrap;
+  }
+  .container-item {
+    width: 50%;
+  }
+  .client-email {
+    margin-top: 32px;
+  }
+  .amount-number {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .amount {
+    align-items: center;
+    padding: 24px;
+  }
+  .bill-to {
+    padding-left: 20px;
+  }
+  .buttons-desktop {
+    display: none;
+  }
+  .status-div {
+    margin-bottom: 0;
+  }
+  .buttons-mob {
+    display: flex;
+    background-color: var(--single-invoice);
+    padding: 24px;
+    border-radius: 8px;
+    margin-top: 56px;
+    width: calc(100% + 48px);
+    position: relative;
+    left: -24px;
+    justify-content: center;
+  }
+  .btn-edit,
+  .btn-paid,
+  .btn-delete {
+    margin: 0;
+    margin-right: 10px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .buttons {
-        justify-content: space-between;
-    }
-    .status-div {
-        justify-content: space-between;
-    }
-    .btn-edit,
-    .btn-paid,
-    .btn-delete {
-        margin: 0;
-        margin-right: 3px;
-    }
+  .buttons {
+    justify-content: space-between;
+  }
+  .status-div {
+    justify-content: space-between;
+  }
+  .btn-edit,
+  .btn-paid,
+  .btn-delete {
+    margin: 0;
+    margin-right: 3px;
+  }
 }
 
 @media screen and (max-width: 420px) {
-    .btn-edit,
-    .btn-paid,
-    .btn-delete {
-        padding: 17px 25px 16px 25px;
-    }
+  .btn-edit,
+  .btn-paid,
+  .btn-delete {
+    padding: 17px 25px 16px 25px;
+  }
 }
 
 @media screen and (max-width: 375px) {
-    .btn-paid {
-        padding: 17px 12px 16px 12px;
-    }
-    .amount {
-        padding: 15px;
-    }
+  .btn-paid {
+    padding: 17px 12px 16px 12px;
+  }
+  .amount {
+    padding: 15px;
+  }
 }
