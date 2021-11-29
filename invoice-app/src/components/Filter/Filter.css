@@ -1,0 +1,28 @@
+.filter {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--filter-btn);
+}
+
+.arrow-up {
+    margin-left: 16px;
+}
+
+.filter.mob {
+    display: none;
+}
+
+.filter.desktop {
+    display: flex;
+}
+
+@media screen and (max-width: 600px) {
+    .filter.mob {
+        display: flex;
+    }
+    .filter.desktop {
+        display: none;
+    }
+}

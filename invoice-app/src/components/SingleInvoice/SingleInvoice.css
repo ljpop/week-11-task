@@ -1,0 +1,151 @@
+.single-invoice {
+    box-sizing: border-box;
+    padding: 16px 32px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    border-radius: 8px;
+    background-color: var(--single-invoice);
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid transparent;
+    flex-direction: row;
+}
+
+.single-invoice:hover {
+    border: 1px solid var(--hover-invoice);
+}
+
+.single-invoice:last-child {
+    margin-bottom: 0;
+}
+
+.singleItem {
+    padding: 9px;
+}
+
+.id,
+.total {
+    min-width: 15%;
+}
+
+.total {
+    text-align: right;
+}
+
+.date,
+.name {
+    min-width: 20%;
+}
+
+.singleItem:last-child {
+    margin-right: 0;
+}
+
+.status {
+    min-width: 104px;
+    font-weight: 700;
+    position: relative;
+    border-radius: 8px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.total {
+    font-weight: 700;
+    color: var(--id);
+}
+
+.id {
+    color: var(--id);
+}
+
+.id,
+span.id {
+    font-weight: 700;
+}
+
+.little-circle {
+    font-size: 32px;
+    position: relative;
+    bottom: -7px;
+}
+
+.hash {
+    color: var(--name-date);
+    font-weight: 700;
+}
+
+.name {
+    color: var(--name);
+}
+
+.date {
+    color: var(--date);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 900px) {
+    .single-invoice {
+        padding: 28px 24px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .single-invoice {
+        padding: 24px 24px;
+        flex-direction: row;
+    }
+    .flex-row {
+        display: flex;
+        flex-direction: column;
+    }
+    .total {
+        order: 0
+    }
+    .arrow-mob {
+        display: none;
+    }
+    .flex-column {
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .single-invoice {
+        flex-direction: column;
+    }
+    .flex-row {
+        display: flex;
+        flex-direction: column;
+    }
+    .total {
+        order: 0;
+    }
+    .total-mob {
+        font-size: 16px;
+    }
+    .arrow-mob {
+        display: none;
+    }
+    .flex-column {
+        align-items: stretch;
+    }
+    .status-mob {
+        position: relative;
+        top: -20px;
+    }
+}

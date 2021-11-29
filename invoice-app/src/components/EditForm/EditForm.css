@@ -1,0 +1,43 @@
+.edit-invoice-form {
+    position: fixed;
+    display: block;
+    height: 100vh;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 616px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 0px 20px 20px 0px;
+    display: block;
+    padding-top: 64px;
+}
+
+.edit-form-header {
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: center;
+}
+
+.close-form {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+input {
+    margin: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .edit-invoice-form {
+        position: absolute;
+        margin-top: 0;
+        top: 80px;
+        height: calc(100% - 80px);
+    }
+}

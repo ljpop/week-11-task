@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header/Header";
+import Invoices from "./components/Invoices/Invoices";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ViewInvoice from "./components/ViewInvoice/ViewInvoice";
+import EditForm from "./components/EditForm/EditForm";
+import { connect } from "react-redux";
 
-function App() {
+const App = (props) => {
+  let jsxForm = null;
+  if (props.editorOpened) {
+    jsxForm = <EditForm />;
+  }
+
+  let clDarkTheme = "";
+  if (props.darkTheme) {
+    clDarkTheme = " dark-theme";
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className={"container" + clDarkTheme}>
+        <Header />
+        {jsxForm}
+        <Routes>
+          <Route exact path="/" element={<Invoices />}></Route>
+          <Route path="/invoice/:id" element={<ViewInvoice />}></Route>
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    editorOpened: state.editorOpened,
+    darkTheme: state.darkTheme,
+  };
+};
+export default connect(mapStateToProps)(App);
